@@ -1,7 +1,7 @@
 function dialChange(name){
     if(name == 'light-grey'){
         document.getElementById("front-img").src = "images/Protype-2.PNG";
-        document.getElementById("back-img").src = "images/Protype-Back-2.PNG";
+        document.getElementById("back-img").src = "images/Protype-Back-2.png";
         document.getElementById("front-img").style.width = "90%";
         document.getElementById("back-img").style.width = "118%";
         document.getElementById("front-img").style.margin = "50px";
@@ -21,7 +21,7 @@ function dialChange(name){
     }
     if(name == 'yellow'){
         document.getElementById("front-img").src = "images/Protype-3.PNG";
-        document.getElementById("back-img").src = "images/Protype-Back-3.PNG";
+        document.getElementById("back-img").src = "images/Protype-Back-3.png";
         document.getElementById("front-img").style.width = "100%";
         document.getElementById("back-img").style.width = "105%";
         document.getElementById("front-img").style.margin = "15px";
