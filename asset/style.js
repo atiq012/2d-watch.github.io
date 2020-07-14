@@ -1,6 +1,6 @@
 function dialChange(name){
     if(name == 'light-grey'){
-        document.getElementById("front-img").src = "images/Protype-2.PNG";
+        document.getElementById("front-img").src = "images/Protype-2.png";
         document.getElementById("back-img").src = "images/Protype-Back-2.png";
         document.getElementById("front-img").style.width = "90%";
         document.getElementById("back-img").style.width = "118%";
@@ -10,8 +10,8 @@ function dialChange(name){
         document.getElementById("yellow").style.border = "none";
     }
     if(name == 'grey'){
-        document.getElementById("front-img").src = "images/Protype-1.PNG";
-        document.getElementById("back-img").src = "images/Protype-Back-1.PNG";
+        document.getElementById("front-img").src = "images/Protype-1.png";
+        document.getElementById("back-img").src = "images/Protype-Back-1.png";
         document.getElementById("front-img").style.width = "105%";
         document.getElementById("back-img").style.width = "105%";
         document.getElementById("front-img").style.margin = "10px";
@@ -20,7 +20,7 @@ function dialChange(name){
         document.getElementById("yellow").style.border = "none";
     }
     if(name == 'yellow'){
-        document.getElementById("front-img").src = "images/Protype-3.PNG";
+        document.getElementById("front-img").src = "images/Protype-3.png";
         document.getElementById("back-img").src = "images/Protype-Back-3.png";
         document.getElementById("front-img").style.width = "100%";
         document.getElementById("back-img").style.width = "105%";
