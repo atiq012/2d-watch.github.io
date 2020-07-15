@@ -7,6 +7,9 @@ body{
 .back{
     width: 40%;
 }
+.front-side{
+    width: 40%;
+}
 .side-bar{
     width: 20%;
     text-align: right;
@@ -23,6 +26,9 @@ body{
 }
 #back-img{
     width:100%;
+}
+#front-side-img{
+    width: 110%;
 }
 .dot {
     height: 34px;
