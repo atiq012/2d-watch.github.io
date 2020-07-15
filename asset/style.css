@@ -59,14 +59,16 @@ body{
     background-color: #FFCD3B;
 }
 .band{
+    margin-top: 50px;
     border-bottom: 1px dotted #ddd;
     padding-bottom: 5px;
-    margin-left: 110px;
+    margin-left: 80px;
 }
 .model{
+    margin-top: 20px;
     border-bottom: 1px dotted #ddd;
     padding-bottom: 5px;
-    margin-left: 110px;
+    margin-left: 80px;
 }
 .content {
     width:100%;
