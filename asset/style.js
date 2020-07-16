@@ -1,66 +1,121 @@
-function dialChange(name){
-    if(name == 'light-grey'){
-        document.getElementById("front-img").src = "images/Protype-2.png";
-        document.getElementById("back-img").src = "images/Protype-Back-2.png";
-        document.getElementById("front-side-img").src = "images/prototype-side-1.png";
-        document.getElementById("front-img").style.width = "90%";
-        document.getElementById("back-img").style.width = "118%";
-        document.getElementById("front-side-img").style.width = "118%";
-        document.getElementById("front-img").style.margin = "50px";
-        document.getElementById("light-grey").style.border = "5px solid green";
-        document.getElementById("grey").style.border = "none";
-        document.getElementById("yellow").style.border = "none";
-    }
-    if(name == 'grey'){
-        document.getElementById("front-img").src = "images/Protype-1.png";
-        document.getElementById("back-img").src = "images/Protype-Back-1.png";
-        document.getElementById("front-side-img").src = "images/prototype-side-grey-4.png";
-        document.getElementById("front-img").style.width = "105%";
-        document.getElementById("back-img").style.width = "105%";
-        document.getElementById("front-side-img").style.width = "115%";
-        document.getElementById("front-img").style.margin = "10px";
-        document.getElementById("grey").style.border = "5px solid green";
-        document.getElementById("light-grey").style.border = "none";
-        document.getElementById("yellow").style.border = "none";
-    }
-    if(name == 'yellow'){
-        document.getElementById("front-img").src = "images/Protype-3.png";
-        document.getElementById("back-img").src = "images/Protype-Back-3.png";
-        document.getElementById("front-side-img").src = "images/prototype-side-yellow-5.png";
-        document.getElementById("front-img").style.width = "100%";
-        document.getElementById("back-img").style.width = "105%";
-        document.getElementById("front-side-img").style.width = "115%";
-        document.getElementById("front-img").style.margin = "15px";
-        document.getElementById("yellow").style.border = "5px solid green";
-        document.getElementById("light-grey").style.border = "none";
-        document.getElementById("grey").style.border = "none";
-    }
+document.getElementById("grey").style.border = "5px solid green";
+document.getElementById("light-grey").style.border = "none";
+document.getElementById("yellow").style.border = "none";
+
+document.getElementById("blue-selected").style.border = "5px solid red";
+document.getElementById("black-selected").style.border = "none";
+document.getElementById("white-selected").style.border = "none";
+
+function dialChange(name) {
+  if (name == "light-grey") {
+    document.getElementById("light-grey").style.border = "5px solid green";
+    document.getElementById("grey").style.border = "none";
+    document.getElementById("yellow").style.border = "none";
+
+    document.getElementById("primary-img").style.backgroundImage =
+      "url('images/Protype-2.png')";
+    document.getElementById("thumbnail-image-front").style.backgroundImage =
+      "url('images/Protype-2.png')";
+    document.getElementById("thumbnail-image-side").style.backgroundImage =
+      "url('images/prototype-side-1.png')";
+    document.getElementById("thumbnail-image-back").style.backgroundImage =
+      "url('images/Protype-Back-2.png')";
+
+    document
+      .getElementById("thumbnail-anchor-front")
+      .setAttribute("data-big", "images/Protype-2.png");
+    document
+      .getElementById("thumbnail-anchor-side")
+      .setAttribute("data-big", "images/prototype-side-1.png");
+    document
+      .getElementById("thumbnail-anchor-back")
+      .setAttribute("data-big", "images/Protype-Back-2.png");
+  }
+  if (name == "grey") {
+    document.getElementById("grey").style.border = "5px solid green";
+    document.getElementById("light-grey").style.border = "none";
+    document.getElementById("yellow").style.border = "none";
+
+    document.getElementById("primary-img").style.backgroundImage =
+      "url('images/Protype-1.png')";
+    document.getElementById("thumbnail-image-front").style.backgroundImage =
+      "url('images/Protype-1.png')";
+    document.getElementById("thumbnail-image-side").style.backgroundImage =
+      "url('images/prototype-side-grey-4.png')";
+    document.getElementById("thumbnail-image-back").style.backgroundImage =
+      "url('images/Protype-Back-1.png')";
+
+    document
+      .getElementById("thumbnail-anchor-front")
+      .setAttribute("data-big", "images/Protype-1.png");
+    document
+      .getElementById("thumbnail-anchor-side")
+      .setAttribute("data-big", "images/prototype-side-grey-4.png");
+    document
+      .getElementById("thumbnail-anchor-back")
+      .setAttribute("data-big", "images/Protype-Back-1.png");
+  }
+  if (name == "yellow") {
+    document.getElementById("yellow").style.border = "5px solid green";
+    document.getElementById("light-grey").style.border = "none";
+    document.getElementById("grey").style.border = "none";
+
+    document.getElementById("primary-img").style.backgroundImage =
+      "url('images/Protype-3.png')";
+    document.getElementById("thumbnail-image-front").style.backgroundImage =
+      "url('images/Protype-3.png')";
+    document.getElementById("thumbnail-image-side").style.backgroundImage =
+      "url('images/prototype-side-yellow-5.png')";
+    document.getElementById("thumbnail-image-back").style.backgroundImage =
+      "url('images/Protype-Back-3.png')";
+
+    document
+      .getElementById("thumbnail-anchor-front")
+      .setAttribute("data-big", "images/Protype-3.png");
+    document
+      .getElementById("thumbnail-anchor-side")
+      .setAttribute("data-big", "images/prototype-side-yellow-5.png");
+    document
+      .getElementById("thumbnail-anchor-back")
+      .setAttribute("data-big", "images/Protype-Back-3.png");
+  }
 }
 
-function bandChange(name){
-    if(name == 'blue'){
-        document.getElementById("front-img").style.backgroundColor = "#00B4FE";
-        document.getElementById("back-img").style.backgroundColor = "#00B4FE";
-        document.getElementById("front-side-img").style.backgroundColor = "#00B4FE";
-        document.getElementById("blue-selected").style.border = "5px solid red";
-        document.getElementById("black-selected").style.border = "none";
-        document.getElementById("white-selected").style.border = "none";
-
-    }
-    if(name == 'black'){
-        document.getElementById("front-img").style.backgroundColor = "#273137";
-        document.getElementById("back-img").style.backgroundColor = "#273137";
-        document.getElementById("front-side-img").style.backgroundColor = "#273137";
-        document.getElementById("black-selected").style.border = "5px solid red";
-        document.getElementById("blue-selected").style.border = "none";
-        document.getElementById("white-selected").style.border = "none";
-    }
-    if(name == 'white'){
-        document.getElementById("front-img").style.backgroundColor = "#FFFFFF";
-        document.getElementById("back-img").style.backgroundColor = "#FFFFFF";
-        document.getElementById("front-side-img").style.backgroundColor = "#FFFFFF";
-        document.getElementById("white-selected").style.border = "5px solid red";
-        document.getElementById("blue-selected").style.border = "none";
-        document.getElementById("black-selected").style.border = "none";
-    }
+function bandChange(name) {
+  if (name == "blue") {
+    document.getElementById("blue-selected").style.border = "5px solid red";
+    document.getElementById("black-selected").style.border = "none";
+    document.getElementById("white-selected").style.border = "none";
+    document.getElementById("primary-img").style.backgroundColor = "#00B4FE";
+    document.getElementById("thumbnail-image-front").style.backgroundColor =
+      "#00B4FE";
+    document.getElementById("thumbnail-image-side").style.backgroundColor =
+      "#00B4FE";
+    document.getElementById("thumbnail-image-back").style.backgroundColor =
+      "#00B4FE";
+  }
+  if (name == "black") {
+    document.getElementById("black-selected").style.border = "5px solid red";
+    document.getElementById("blue-selected").style.border = "none";
+    document.getElementById("white-selected").style.border = "none";
+    document.getElementById("primary-img").style.backgroundColor = "#273137";
+    document.getElementById("thumbnail-image-front").style.backgroundColor =
+      "#273137";
+    document.getElementById("thumbnail-image-side").style.backgroundColor =
+      "#273137";
+    document.getElementById("thumbnail-image-back").style.backgroundColor =
+      "#273137";
+  }
+  if (name == "white") {
+    document.getElementById("white-selected").style.border = "5px solid red";
+    document.getElementById("blue-selected").style.border = "none";
+    document.getElementById("black-selected").style.border = "none";
+    document.getElementById("primary-img").style.backgroundColor = "#FFFFFF";
+    document.getElementById("thumbnail-image-front").style.backgroundColor =
+      "#FFFFFF";
+    document.getElementById("thumbnail-image-side").style.backgroundColor =
+      "#FFFFFF";
+    document.getElementById("thumbnail-image-back").style.backgroundColor =
+      "#FFFFFF";
+  }
 }

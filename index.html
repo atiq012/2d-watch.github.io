@@ -1,29 +1,167 @@
 <html>
-    <header>
-        <link rel="stylesheet" href="asset/style.css">
-    </header>
-    <body>
-        <div class="content">
-            <div class="front">
-                <img id="front-img" src="images/Protype-1.png" alt="prototype-img">
-            </div>
-            <div class="back">
-                <img id="back-img" src="images/Protype-Back-1.png" alt="prototype-img">
-            </div>
-            <div class="front-side">
-                <img id="front-side-img" src="images/prototype-side-1.png" alt="prototype-img">
-            </div>
-            <div class="side-bar">
-                <h3 class="band"> Choose Band </h3>
-                <span class="dot blue" id="blue-selected" onclick="bandChange('blue')"></span>
-                <span class="dot black" id="black-selected" onclick="bandChange('black')"></span>
-                <span class="dot white" id="white-selected" onclick="bandChange('white')"></span>
-                <h3 class="model"> Choose Model </h3>
-                <span class="dot light-grey" id="light-grey" onclick="dialChange('light-grey')"></span>
-                <span class="dot grey" id="grey" onclick="dialChange('grey')"></span>
-                <span class="dot yellow" id="yellow" onclick="dialChange('yellow')"></span>
-            </div>
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="asset/style.css" />
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+      }
+
+      .image-gallery {
+        margin: 0 auto;
+        display: table;
+      }
+
+      .primary,
+      .thumbnails {
+        display: table-cell;
+      }
+
+      .thumbnails {
+        width: 300px;
+      }
+
+      .primary {
+        width: 500px;
+        height: 400px;
+        background-color: #cccccc;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .thumbnail:hover .thumbnail-image,
+      .selected .thumbnail-image {
+        border: 4px solid red;
+      }
+
+      .thumbnail-image {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 4px solid white;
+      }
+      .logo {
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+  </header>
+  <body>
+    <div class="logo">
+      <img src="images/apple_logo.png" alt="logo" />
+    </div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="image-gallery">
+          <aside class="thumbnails">
+            <a
+              href="#"
+              class="selected thumbnail"
+              id="thumbnail-anchor-front"
+              data-big="images/Protype-1.png"
+            >
+              <div
+                class="thumbnail-image"
+                id="thumbnail-image-front"
+                style="
+                  background-image: url(images/Protype-1.png);
+                  background-color: #00b4fe;
+                "
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="thumbnail"
+              id="thumbnail-anchor-side"
+              data-big="images/prototype-side-1.png"
+            >
+              <div
+                class="thumbnail-image"
+                id="thumbnail-image-side"
+                style="
+                  background-image: url(images/prototype-side-1.png);
+                  background-color: #00b4fe;
+                "
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="thumbnail"
+              id="thumbnail-anchor-back"
+              data-big="images/Protype-Back-1.png"
+            >
+              <div
+                class="thumbnail-image"
+                id="thumbnail-image-back"
+                style="
+                  background-image: url(images/Protype-Back-1.png);
+                  background-color: #00b4fe;
+                "
+              ></div>
+            </a>
+          </aside>
+
+          <main
+            class="primary"
+            id="primary-img"
+            style="
+              background-image: url('images/Protype-1.png');
+              background-color: #00b4fe;
+            "
+          ></main>
         </div>
-    </body>
-    <script src="asset/style.js"></script>
+      </div>
+
+      <div class="side-bar">
+        <h3 class="band">Choose Band</h3>
+        <span
+          class="dot blue"
+          id="blue-selected"
+          onclick="bandChange('blue')"
+        ></span>
+        <span
+          class="dot black"
+          id="black-selected"
+          onclick="bandChange('black')"
+        ></span>
+        <span
+          class="dot white"
+          id="white-selected"
+          onclick="bandChange('white')"
+        ></span>
+        <h3 class="model">Choose Model</h3>
+        <span
+          class="dot light-grey"
+          id="light-grey"
+          onclick="dialChange('light-grey')"
+        ></span>
+        <span class="dot grey" id="grey" onclick="dialChange('grey')"></span>
+        <span
+          class="dot yellow"
+          id="yellow"
+          onclick="dialChange('yellow')"
+        ></span>
+      </div>
+    </div>
+  </body>
+  <script src="asset/style.js"></script>
+  <script>
+    $(".thumbnail").on("click", function () {
+      var clicked = $(this);
+      var newSelection = clicked.data("big");
+      var $img = $(".primary").css(
+        "background-image",
+        "url(" + newSelection + ")"
+      );
+      clicked.parent().find(".thumbnail").removeClass("selected");
+      clicked.addClass("selected");
+      $(".primary").empty().append($img.hide().fadeIn("slow"));
+    });
+  </script>
 </html>

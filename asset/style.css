@@ -1,76 +1,68 @@
-body{
-    background-color: #F2F2F2;
+body {
+  background-color: #f2f2f2;
 }
-.front{
-    width: 40%;
-}
-.back{
-    width: 40%;
-}
-.front-side{
-    width: 40%;
-}
-.side-bar{
-    width: 20%;
-    text-align: right;
-    padding-right: 20px;
-    font-family: Roboto,sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    /* position: relative; */
+.side-bar {
+  width: 20%;
+  text-align: right;
+  padding-right: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  /* position: relative; */
 }
 
-#front-img{
-    width:100%;
+#front-img {
+  width: 100%;
 }
-#back-img{
-    width:100%;
+#back-img {
+  width: 100%;
 }
-#front-side-img{
-    width: 110%;
+#front-side-img {
+  width: 110%;
 }
 .dot {
-    height: 34px;
-    width: 34px;
-    border-radius: 50%;
-    display: inline-block;
-    border: 1px solid #CCCCCC;
-    margin: 3px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  margin: 3px;
 }
 
-.blue{
-    background-color: #00B4FE;
+.blue {
+  background-color: #00b4fe;
 }
 
-.black{
-    background-color: #273137;
+.black {
+  background-color: #273137;
 }
-.white{
-    background-color: #FFFFFF;
+.white {
+  background-color: #ffffff;
 }
-.light-grey{
-    background-color: #CCCCCC;
+.light-grey {
+  background-color: #cccccc;
 }
-.grey{
-    background-color: #888888;
+.grey {
+  background-color: #888888;
 }
-.yellow{
-    background-color: #FFCD3B;
+.yellow {
+  background-color: #ffcd3b;
 }
-.band{
-    margin-top: 50px;
-    border-bottom: 1px dotted #ddd;
-    padding-bottom: 5px;
-    margin-left: 80px;
+.band {
+  margin-top: 50px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 5px;
+  margin-left: 80px;
 }
-.model{
-    margin-top: 20px;
-    border-bottom: 1px dotted #ddd;
-    padding-bottom: 5px;
-    margin-left: 80px;
+.model {
+  margin-top: 20px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 5px;
+  margin-left: 80px;
 }
 .content {
-    width:100%;
-    display:flex;
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
 }
