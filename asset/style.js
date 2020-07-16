@@ -7,6 +7,17 @@ document.getElementById("black-selected").style.border = "none";
 document.getElementById("white-selected").style.border = "none";
 
 function dialChange(name) {
+  if ($("#thumbnail-anchor-side").hasClass("selected")) {
+    $("#thumbnail-anchor-side").removeClass("selected");
+  }
+  if ($("#thumbnail-anchor-back").hasClass("selected")) {
+    $("#thumbnail-anchor-back").removeClass("selected");
+  }
+  if ($("#thumbnail-anchor-front").hasClass("selected")) {
+    $("#thumbnail-anchor-front").removeClass("selected");
+  }
+  $("#thumbnail-anchor-front").addClass("selected");
+
   if (name == "light-grey") {
     document.getElementById("light-grey").style.border = "5px solid green";
     document.getElementById("grey").style.border = "none";
@@ -120,11 +131,13 @@ function bandChange(name) {
   }
 }
 
+function imageShow(e) {
+  document.getElementById("primary-img").style.backgroundImage =
+    "url('" + e.getAttribute("data-big") + "')";
+}
+
 $(".thumbnail").on("click", function () {
   var clicked = $(this);
-  var newSelection = clicked.data("big");
-  var $img = $(".primary").css("background-image", "url(" + newSelection + ")");
   clicked.parent().find(".thumbnail").removeClass("selected");
   clicked.addClass("selected");
-  $(".primary").empty().append($img.hide().fadeIn("slow"));
 });
