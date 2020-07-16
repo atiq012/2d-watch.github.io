@@ -3,54 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="asset/style.css" />
-    <style>
-      .wrapper {
-        margin: 0 auto;
-        width: 80%;
-        text-align: center;
-      }
-
-      .image-gallery {
-        margin: 0 auto;
-        display: table;
-      }
-
-      .primary,
-      .thumbnails {
-        display: table-cell;
-      }
-
-      .thumbnails {
-        width: 300px;
-      }
-
-      .primary {
-        width: 500px;
-        height: 400px;
-        background-color: #cccccc;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-
-      .thumbnail:hover .thumbnail-image,
-      .selected .thumbnail-image {
-        border: 4px solid red;
-      }
-
-      .thumbnail-image {
-        width: 100px;
-        height: 100px;
-        margin: 20px auto;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        border: 4px solid white;
-      }
-      .logo {
-        border-bottom: 1px solid #ccc;
-      }
-    </style>
   </header>
   <body>
     <div class="logo">
@@ -151,17 +103,4 @@
     </div>
   </body>
   <script src="asset/style.js"></script>
-  <script>
-    $(".thumbnail").on("click", function () {
-      var clicked = $(this);
-      var newSelection = clicked.data("big");
-      var $img = $(".primary").css(
-        "background-image",
-        "url(" + newSelection + ")"
-      );
-      clicked.parent().find(".thumbnail").removeClass("selected");
-      clicked.addClass("selected");
-      $(".primary").empty().append($img.hide().fadeIn("slow"));
-    });
-  </script>
 </html>
